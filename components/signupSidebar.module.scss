@@ -1,0 +1,21 @@
+$mobile: 576px;
+$tab: 991px;
+
+.h3_heading {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    align-items: center;
+    text-align: center;
+    color: #1D99F2;
+    margin-bottom: 70px;
+    max-width: 384px;
+}
+
+@media (max-width:$tab ) { 
+    .h3_heading {
+        font-size: 18px;
+    }   
+     
+}

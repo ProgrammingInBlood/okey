@@ -1,0 +1,73 @@
+.accordion {
+  list-style: none;
+}
+
+.accordion_item {
+  background: #ffffff;
+  /* mid grey */
+
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 6px;
+  list-style: none;
+  width: 100%;
+  overflow: hidden;
+}
+
+.button {
+  font-size: 18px;
+  background: #ffffff;
+  /* mid grey */
+
+  border: 1px solid #dadada;
+  box-sizing: border-box;
+  border-radius: 6px;
+  color: #000;
+  text-align: left;
+  font-weight: 700;
+  //   display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 8px 14px 8px;
+  cursor: pointer;
+  border: none;
+  span {
+    padding: 0 20px;
+    min-width: 100px;
+    position: relative;
+  }
+}
+
+.control {
+  font-size: 20px;
+}
+
+.answer {
+  background-color: #fff;
+  padding:0px  20px  21px  64px;
+  font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 18px;
+color: #787C84;
+}
+
+/* activate toggle */
+// .accordion_item.active .button {
+//   //   background-color: #105057;
+// }
+.answer_wrapper {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.2s;
+}
+.active {
+  background: #FFFFFF;
+/* Primary Blue */
+
+border: 1px solid #1D99F2;
+box-sizing: border-box;
+border-radius: 6px;
+}

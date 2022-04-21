@@ -1,0 +1,246 @@
+$white: #f6f7fa;
+$primary: #1d99f2;
+$prwhite: #fff;
+$mobile: 576px;
+$tab: 991px;
+
+$dropdownHeight: 64px;
+$bg-white: #fff;
+
+.dropdown {
+  width: 100%;
+  margin-bottom: 16px;
+  background-color: $bg-white;
+
+  * {
+    -webkit-transition: all 100ms linear;
+    -ms-transition: all 100ms linear;
+    transition: all 100ms linear;
+  }
+  cursor: pointer;
+}
+
+.selectBoxContainer {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.selectBox {
+  width: 100%;
+  position: relative;
+  display: flex;
+  border: 1px solid #dadada;
+  border-radius: 6px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+.selectBoxActive {
+  width: 100%;
+  position: relative;
+  display: flex;
+  border: none;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  border-top: 1px solid #dadada;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  height: 64px;
+  display: flex;
+  align-items: center;
+}
+
+.selectBoxSelectedItem {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 4px 12px;
+  vertical-align: middle;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  color: #08070c;
+  opacity: 0.5;
+  user-select: none;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 0;
+  margin: 0;
+  padding-left: 40px;
+
+  display: flex;
+}
+.selectBoxSelectedItemActive {
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  padding: 4px 12px;
+  vertical-align: middle;
+  font-family: "poppins", sans-serif;
+  font-weight: 600;
+  color: #08070c;
+  opacity: 1;
+  user-select: none;
+  font-size: 18px;
+  line-height: 27px;
+  padding: 0;
+  margin: 0;
+  padding-left: 40px;
+
+  display: flex;
+}
+
+.selectBoxItems {
+  padding-top: 0;
+  position: absolute;
+  top: 100%;
+  left: -1px;
+  width: 100.3%;
+  border-bottom: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-radius: 0 0 6px 6px;
+  background-color: $bg-white;
+
+  div {
+    padding: 15px 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+
+    &:nth-child(1) {
+      border-top: 1px solid #ddd;
+    }
+  }
+}
+.selectBoxItems {
+  div:hover {
+    background: #f6f7fa;
+  }
+}
+
+.selectBoxArrow {
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  background: #fff;
+  position: absolute;
+  top: calc($dropdownHeight / 2 - 15px);
+  right: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrowDown {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid red;
+}
+
+.arrowUp {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 10px solid red;
+}
+
+.halfdiv {
+  display: block;
+}
+.dropsearchbox {
+  padding: 0 !important;
+  .halfdiv {
+    padding: 0;
+  }
+}
+
+.btnsearch {
+  background-color: $primary;
+  color: $prwhite;
+}
+
+.btnsearch {
+  display: block;
+  border: 0;
+  border-radius: 6px;
+  padding: 4px 19px;
+}
+.addselecttext {
+  display: inline-block;
+  background: #8eccf9;
+  border-radius: 20px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  color: #fff;
+  padding: 4px 16px;
+  margin: 5px;
+}
+.dropdownsearchbox {
+  padding-bottom: 10px !important;
+  padding-top: 10px !important;
+}
+
+.dropdownsearchbox {
+  border-top: 1px solid #dadada;
+  div {
+    border: 0px !important;
+  }
+}
+
+.dropdownsearchboxlimitshow {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  color: #979797;
+  margin-bottom: 5px;
+}
+
+.selectsearchpanel {
+  position: relative;
+  .searchicon {
+    border-top: none !important;
+    position: absolute;
+    left: 16px;
+  }
+  .inputsearch {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: $tab) {
+  .selectBoxSelectedItem {
+    font-size: 16px;
+    line-height: 32px;
+  }
+}
+
+@media (max-width: $mobile) {
+  .selectBoxItems {
+    max-height: 200px;
+    overflow: overlay;
+  }
+}
+
+.selected {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
